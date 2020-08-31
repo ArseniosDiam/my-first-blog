@@ -13,6 +13,9 @@
 
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
             <h3>Hello! I’m Arsenios Diamantakos and this is my project, created with Django</h3>
             <h1><a href="/">Arsenios' Blog</a></h1>
         </div>
